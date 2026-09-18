@@ -1,0 +1,86 @@
+---
+import '../styles/base.css';
+import '../styles/header.css';
+import '../styles/navigation.css';
+import '../styles/cards.css';
+import '../styles/footer.css';
+import '../styles/tokens-logico.css';
+import AccessModal from '../components/AccessModal.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import BackToTop from '../components/BackToTop.astro';
+import SEO from '../components/SEO.astro';
+import SchemaJsonLd from '../components/SchemaJsonLd.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  ogImage?: string;
+  canonicalUrl?: string;
+  noindex?: boolean;
+  type?: 'website' | 'article' | 'profile';
+  publishedDate?: Date | string;
+  updatedDate?: Date | string;
+  author?: string;
+  themeVariation?: 'convert' | 'logico';
+  bodyClass?: string;
+  schemaType?: 'home' | 'about' | 'article' | 'service' | 'person' | 'breadcrumbs';
+  schemaData?: any;
+  breadcrumbs?: Array<{ name: string; item: string }>;
+}
+
+const {
+  title,
+  description,
+  image,
+  ogImage = image,
+  canonicalUrl,
+  noindex,
+  type = 'website',
+  publishedDate,
+  updatedDate,
+  author,
+  themeVariation = 'convert',
+  bodyClass = '',
+  schemaType,
+  schemaData,
+  breadcrumbs,
+} = Astro.props;
+---
+<!doctype html>
+<html lang="en" data-theme={themeVariation}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <SEO
+    title={title}
+    description={description}
+    ogImage={ogImage}
+    canonicalUrl={canonicalUrl}
+    noindex={noindex}
+    type={type}
+    publishedDate={publishedDate}
+    updatedDate={updatedDate}
+    author={author}
+  />
+  <SchemaJsonLd
+    type={schemaType || (type === 'article' ? 'article' : (title ? 'breadcrumbs' : 'home'))}
+    data={schemaData}
+    breadcrumbs={breadcrumbs}
+  />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="sitemap" href="/sitemap-index.xml" />
+</head>
+<body class={bodyClass}>
+  <div class="page-wrap">
+    <Header themeVariation={themeVariation} />
+    <div class="site-content-wrap">
+      <slot />
+    </div>
+    <Footer themeVariation={themeVariation} />
+  </div>
+  <AccessModal />
+  <BackToTop />
+</body>
+</html>

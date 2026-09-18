@@ -1,0 +1,896 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageTitle from '../components/PageTitle.astro';
+import CTABand from '../components/CTABand.astro';
+
+const verifiedCaseStudies = [
+  {
+    title: "MediPulse: Accessible Science Hub",
+    category: "HEALTHCARE & SCIENCE",
+    description: "Translating complex scientific research and clinical data into scannable, accessible medical news for healthcare professionals and patients.",
+    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=800&auto=format&fit=crop",
+    link: "https://fotisp.gr",
+    tags: ["UX Research", "Information Architecture", "Accessibility", "Medical UX"]
+  },
+  {
+    title: "HealthPulse Platform",
+    category: "DIGITAL HEALTH",
+    description: "Design system architecture and user journeys for personalized patient management and healthcare monitoring workflows.",
+    image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=800&auto=format&fit=crop",
+    link: "https://fotisp.gr",
+    tags: ["UX Strategy", "OOUX", "Design System", "Patient Experience"]
+  },
+  {
+    title: "Scientific Discovery Project",
+    category: "RESEARCH & STRATEGY",
+    description: "Evidence-based UX research and interface design for data-heavy scientific discovery and research platforms.",
+    image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=800&auto=format&fit=crop",
+    link: "https://fotisp.gr",
+    tags: ["Generative AI", "User Research", "Data Visualization", "HCI"]
+  },
+  {
+    title: "Food We Love: Culinary Platform",
+    category: "UX DESIGN & WRITING",
+    description: "Complete UX design, copy strategy, and front-end implementation for a community-driven culinary platform.",
+    image: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?q=80&w=800&auto=format&fit=crop",
+    link: "https://fotisp.gr",
+    tags: ["UX Design", "UX Writing", "Web Dev", "E-Commerce"]
+  }
+];
+
+const verifiedServices = [
+  {
+    title: "UX/UI Design",
+    icon: "🎨",
+    description: "High-density interface design, design system architecture, and rapid interactive prototyping centered on user goals."
+  },
+  {
+    title: "UX Research & AI",
+    icon: "🔬",
+    description: "Generative user research, usability testing, persona mapping, and agentic AI-assisted research workflows."
+  },
+  {
+    title: "UX Writing & Microcopy",
+    icon: "✍️",
+    description: "Clear content strategy, microcopy engineering, and scannable technical writing to reduce user cognitive friction."
+  },
+  {
+    title: "Web & E-Commerce Dev",
+    icon: "💻",
+    description: "Custom web development, WordPress engineering, e-shops, and production-ready HTML/CSS/JS interfaces."
+  },
+  {
+    title: "Project Management",
+    icon: "🎯",
+    description: "Agile sprint leadership, design operations, and cross-functional alignment between engineering and business teams."
+  },
+  {
+    title: "Video & Media Editing",
+    icon: "🎬",
+    description: "Visual storytelling, product demonstration videos, and technical media production for digital platforms."
+  }
+];
+---
+
+<BaseLayout
+  title="About Fotis Pastrakis — UX Strategist & Researcher"
+  description="10+ years leading evidence-based UX strategy for global enterprises in Pharma & Finance (Pfizer, Deloitte)."
+  schemaType="person"
+  breadcrumbs={[
+    { name: 'Home', item: '/' },
+    { name: 'About', item: '/about' }
+  ]}
+>
+  {/* Scroll Progress Bar */}
+  <div id="read-progress" class="read-progress-bar" aria-hidden="true"></div>
+
+  <PageTitle
+    title="Evidence-Based UX Strategy & Research"
+    subtitle="Grounding complex digital products in human behavior, Object-Oriented UX, and clear architecture."
+    breadcrumbs={[{ label: 'ABOUT' }]}
+  />
+
+  <main class="main about-page-main" id="site-content">
+    <div class="container space-y-16">
+
+      <!-- ═══════════════════════════════════════════════════════
+           SECTION 1: 70/30 SPLIT (AUTHENTIC BIO & PROFILE)
+      ════════════════════════════════════════════════════════ -->
+      <section id="bio-intro" class="section-70-30" aria-label="Executive Bio and Profile">
+        
+        <!-- Main Column (70%) -->
+        <article class="bio-main-col">
+          <div class="section-badge-bar">
+            <span class="category-badge">UX STRATEGIST & RESEARCHER</span>
+          </div>
+
+          <h2 class="bio-headline">
+            Designing for complex domains. Grounding strategy in human behavior.
+          </h2>
+
+          <div class="bio-prose">
+            <p>
+              I am <strong>Fotis Pastrakis</strong>, a Senior UX Strategist, Researcher, and Web Developer with over 10 years of experience shaping digital experiences across highly regulated industries—including <strong>Pharmaceuticals</strong> and <strong>Finance</strong>. Over the course of my career, I have collaborated with global enterprise organizations such as <strong>Pfizer</strong> and <strong>Deloitte</strong>, delivering evidence-based product strategy and accessible user interfaces.
+            </p>
+
+            <!-- Methodology Callout Box -->
+            <blockquote class="philosophy-quote-box">
+              <span class="quote-symbol">“</span>
+              <p class="quote-text">
+                Grounding user interfaces in Object-Oriented mental models (OOUX) to turn complex domain logic into intuitive, frictionless digital journeys.
+              </p>
+              <footer class="quote-author">— Fotis Pastrakis, UX Methodology</footer>
+            </blockquote>
+
+            <p>
+              My approach merges rigorous user research with hybrid technical execution. I apply <strong>Object-Oriented UX (OOUX)</strong> to map complex systems into clear object structures before code is written, drastically reducing cognitive load. Additionally, I integrate <strong>Generative and Agentic AI</strong> into research synthesis workflows to accelerate discovery without sacrificing human insight.
+            </p>
+            <p>
+              As a hybrid creator, I am UX-first while remaining fluent in modern HTML, CSS, and JavaScript—allowing me to bridge the gap between high-level strategy, design systems, and production engineering.
+            </p>
+          </div>
+
+          <!-- Direct Link Button: VISIT FOTISP.GR -->
+          <div class="bio-actions">
+            <a href="https://fotisp.gr" target="_blank" rel="noopener noreferrer" class="btn visit-fotisp-btn" id="visit-fotisp-btn">
+              VISIT FOTISP.GR <span class="btn-arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Sidebar Column (30% - Sticky top-24) -->
+        <aside class="bio-sidebar sticky-sidebar">
+          <div class="profile-card">
+            <div class="profile-avatar-wrapper">
+              <img 
+                src="/images/fotis-pastrakis.jpg" 
+                alt="Fotis Pastrakis" 
+                class="profile-avatar-img"
+                width="200"
+                height="200"
+              />
+              <span class="status-pulse-dot" title="Available for UX advisory & research"></span>
+            </div>
+
+            <h3 class="profile-name">Fotis Pastrakis</h3>
+            <p class="profile-role">UX Strategist & Lead Researcher</p>
+
+            <div class="profile-location-tag">
+              <span class="loc-icon">📍</span>
+              <span>UTC+2 // THESSALONIKI, GREECE</span>
+            </div>
+
+            <div class="profile-social-list">
+              <a href="mailto:fotispastrakis@gmail.com" class="social-item">
+                <span class="social-icon">✉️</span> fotispastrakis@gmail.com
+              </a>
+              <a href="tel:+306989697150" class="social-item">
+                <span class="social-icon">📞</span> +30 69 89 69 7150
+              </a>
+              <a href="https://github.com/ux-fotisp" target="_blank" rel="noopener noreferrer" class="social-item">
+                <span class="social-icon">💻</span> GitHub / ux-fotisp
+              </a>
+              <a href="https://fotisp.gr" target="_blank" rel="noopener noreferrer" class="social-item">
+                <span class="social-icon">🌐</span> fotisp.gr
+              </a>
+            </div>
+          </div>
+        </aside>
+
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════
+           SECTION 2: 100% FULL-WIDTH (VERIFIED CASE STUDIES SHOWCASE)
+      ════════════════════════════════════════════════════════ -->
+      <section id="case-studies" class="section-fullwidth" aria-label="Verified Case Studies Showcase">
+        <div class="section-header-centered">
+          <span class="category-badge">VERIFIED PORTFOLIO</span>
+          <h2 class="section-title">Featured Case Studies & Product Research</h2>
+          <p class="section-subtitle">
+            Selected work spanning healthcare communication, digital health, research platforms, and user-centered design.
+          </p>
+        </div>
+
+        <div class="case-studies-grid">
+          {verifiedCaseStudies.map((project) => (
+            <article class="case-card">
+              <div class="case-card-image-wrap">
+                <img src={project.image} alt={project.title} class="case-card-img" loading="lazy" />
+                <div class="case-card-overlay">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" class="case-preview-link">
+                    VIEW ON FOTISP.GR <span aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="case-card-content">
+                <span class="case-card-category">{project.category}</span>
+                <h3 class="case-card-title">
+                  <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    {project.title}
+                  </a>
+                </h3>
+                <p class="case-card-desc">{project.description}</p>
+                
+                <div class="case-card-tags">
+                  {project.tags.map((tag) => (
+                    <span class="tag-pill">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════════════════
+           SECTION 3: 70/30 SPLIT (SERVICES & ACADEMIC RESEARCH)
+      ════════════════════════════════════════════════════════ -->
+      <section id="services-academia" class="section-70-30" aria-label="Services and Academic Research">
+        
+        <!-- Main Column (70%) -->
+        <div class="services-main-col">
+          <div class="section-badge-bar">
+            <span class="category-badge">SERVICES & RESEARCH</span>
+          </div>
+
+          <h2 class="section-title-left">Services & Core Capabilities</h2>
+          <p class="section-desc-left">
+            Comprehensive UX strategy, user research, and web execution tailored for high-impact platforms.
+          </p>
+
+          <div class="services-grid">
+            {verifiedServices.map((service) => (
+              <div class="service-card">
+                <div class="service-head">
+                  <span class="service-icon">{service.icon}</span>
+                  <h3 class="service-title">{service.title}</h3>
+                </div>
+                <p class="service-desc">{service.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <!-- Academic Research Focus Box -->
+          <div class="academic-box">
+            <span class="academic-badge">ACADEMIC RESEARCH & HCI FOCUS</span>
+            <h3 class="academic-title">Human-Computer Interaction & Cultural Heritage</h3>
+            <p class="academic-text">
+              Active academic research focus on <strong>Human-Computer Interaction (HCI)</strong>, specifically exploring <strong>personalization and recommendation systems in Cultural Heritage</strong>. Investigating how adaptive algorithms and user-centered mental models can make historical datasets, museum archives, and cultural artifacts more engaging and accessible to diverse global audiences.
+            </p>
+          </div>
+        </div>
+
+        <!-- Sidebar Column (30% - Sticky top-24) -->
+        <aside class="services-sidebar sticky-sidebar">
+          <div class="action-widget-card">
+            <div class="action-widget-badge">COLLABORATION</div>
+            <h3 class="action-widget-title">Initiate Project Briefing</h3>
+            <p class="action-widget-desc">
+              Looking to build evidence-based products, reduce cognitive friction, or scope dedicated UX research?
+            </p>
+
+            <a href="/contact" class="btn action-widget-btn">
+              START A PROJECT <span aria-hidden="true">→</span>
+            </a>
+
+            <div class="action-widget-foot">
+              <span class="status-dot-green"></span>
+              DIRECT RESPONSE &lt; 4 HOURS
+            </div>
+          </div>
+        </aside>
+
+      </section>
+
+    </div>
+  </main>
+
+  <CTABand
+    title="Want to build evidence-based products?"
+    subtitle="Let's discuss how UX strategy, research, and technical execution can transform your product."
+    buttonLabel="INITIATE BRIEFING"
+    buttonUrl="/contact"
+    variant="scarlet"
+  />
+</BaseLayout>
+
+<style>
+  /* Fixed Top Reading Progress Bar */
+  .read-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: var(--color-scarlet-red, #ee2626);
+    box-shadow: 0 0 12px var(--color-scarlet-red, #ee2626);
+    width: 0%;
+    z-index: 1000;
+    transition: width 0.1s ease-out;
+  }
+
+  .about-page-main {
+    background: var(--color-obsidian, #080303);
+    padding-bottom: 96px;
+  }
+
+  .space-y-16 > * + * {
+    margin-top: 64px;
+  }
+
+  /* 70/30 Split Layout Grid */
+  .section-70-30 {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 48px;
+    align-items: start;
+  }
+
+  @media (max-width: 992px) {
+    .section-70-30 {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Sticky Sidebar (top-24 / 100px) */
+  .sticky-sidebar {
+    position: sticky;
+    top: 100px;
+  }
+
+  /* Common Category Badge */
+  .category-badge {
+    font-family: monospace;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-scarlet-red, #ee2626);
+    background: rgba(238, 38, 38, 0.1);
+    border: 1px solid rgba(238, 38, 38, 0.3);
+    padding: 4px 12px;
+    border-radius: 9999px;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+
+  /* Section Titles */
+  .bio-headline,
+  .section-title-left {
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+    font-weight: 900;
+    color: #FFFFFF;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 0 0 20px 0;
+  }
+
+  .section-desc-left {
+    font-size: 1.1rem;
+    color: #D1D5DB;
+    line-height: 1.6;
+    margin-bottom: 32px;
+  }
+
+  /* Executive Bio Prose */
+  .bio-prose {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #D1D5DB;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .bio-prose strong {
+    color: #FFFFFF;
+  }
+
+  /* Philosophy Quote Box */
+  .philosophy-quote-box {
+    background: var(--color-burgundy, #1A080B);
+    border-left: 4px solid var(--color-scarlet-red, #ee2626);
+    border-top: 1px solid var(--color-border-deep, #380F15);
+    border-right: 1px solid var(--color-border-deep, #380F15);
+    border-bottom: 1px solid var(--color-border-deep, #380F15);
+    border-radius: 0 8px 8px 0;
+    padding: 28px 32px;
+    margin: 16px 0;
+    position: relative;
+  }
+
+  .quote-symbol {
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--color-scarlet-red, #ee2626);
+    opacity: 0.3;
+    position: absolute;
+    top: 12px;
+    left: 16px;
+  }
+
+  .quote-text {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.5;
+    margin: 0 0 12px 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .quote-author {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: var(--color-scarlet-red, #ee2626);
+    text-transform: uppercase;
+  }
+
+  /* Direct Link Button: VISIT FOTISP.GR */
+  .bio-actions {
+    margin-top: 32px;
+  }
+
+  .visit-fotisp-btn {
+    background: var(--color-scarlet-red, #ee2626);
+    color: #FFFFFF;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 0 20px rgba(238, 38, 38, 0.4);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+  }
+
+  .visit-fotisp-btn:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 0 28px rgba(238, 38, 38, 0.65);
+    background: #EF4444;
+  }
+
+  .btn-arrow {
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+  }
+
+  .visit-fotisp-btn:hover .btn-arrow {
+    transform: translateX(4px);
+  }
+
+  /* Profile Card (Sidebar 1) */
+  .profile-card {
+    background: var(--color-surface, #0F0909);
+    border: 1px solid var(--color-border-deep, #380F15);
+    border-radius: 12px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-avatar-wrapper {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--color-scarlet-red, #ee2626);
+    box-shadow: 0 0 20px rgba(238, 38, 38, 0.35);
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+  .profile-avatar-wrapper:hover {
+    box-shadow: 0 0 30px rgba(238, 38, 38, 0.6);
+    transform: scale(1.02);
+  }
+
+  .profile-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .status-pulse-dot {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #10B981;
+    box-shadow: 0 0 10px #10B981;
+    border: 2px solid #0F0909;
+  }
+
+  .profile-name {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: #FFFFFF;
+    margin: 0 0 4px 0;
+  }
+
+  .profile-role {
+    font-size: 13px;
+    color: #9CA3AF;
+    margin: 0 0 16px 0;
+  }
+
+  .profile-location-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: #F3F4F6;
+    background: rgba(238, 38, 38, 0.08);
+    border: 1px solid rgba(238, 38, 38, 0.25);
+    padding: 6px 14px;
+    border-radius: 9999px;
+    margin-bottom: 20px;
+  }
+
+  .profile-social-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .social-item {
+    font-size: 12px;
+    font-weight: 600;
+    color: #9CA3AF;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s ease;
+  }
+
+  .social-item:hover {
+    color: #FFFFFF;
+    background: rgba(238, 38, 38, 0.12);
+    border-color: rgba(238, 38, 38, 0.3);
+  }
+
+  /* Section Header Centered (100% Full-Width) */
+  .section-header-centered {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 48px auto;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 4vw, 2.75rem);
+    font-weight: 900;
+    color: #FFFFFF;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.02em;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+    color: #9CA3AF;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Case Studies Grid (4 Cards) */
+  .case-studies-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  @media (max-width: 768px) {
+    .case-studies-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .case-card {
+    background: var(--color-burgundy, #1A080B);
+    border: 1px solid var(--color-border-deep, #380F15);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .case-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-scarlet-red, #ee2626);
+    box-shadow: 0 0 24px rgba(238, 38, 38, 0.25);
+  }
+
+  .case-card-image-wrap {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background: #080303;
+  }
+
+  .case-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .case-card:hover .case-card-img {
+    transform: scale(1.05);
+  }
+
+  .case-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(8, 3, 3, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .case-card:hover .case-card-overlay {
+    opacity: 1;
+  }
+
+  .case-preview-link {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: #FFFFFF;
+    background: var(--color-scarlet-red, #ee2626);
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 0 16px rgba(238, 38, 38, 0.5);
+  }
+
+  .case-card-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .case-card-category {
+    font-family: monospace;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: var(--color-scarlet-red, #ee2626);
+  }
+
+  .case-card-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .case-card-title a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .case-card-title a:hover {
+    color: var(--color-scarlet-red, #ee2626);
+  }
+
+  .case-card-desc {
+    font-size: 13.5px;
+    color: #9CA3AF;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .case-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+  }
+
+  .tag-pill {
+    font-family: monospace;
+    font-size: 10px;
+    color: #D1D5DB;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 3px 8px;
+    border-radius: 4px;
+  }
+
+  /* Section 3: Services Grid */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+
+  @media (max-width: 640px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .service-card {
+    background: var(--color-surface, #0F0909);
+    border: 1px solid var(--color-border-deep, #380F15);
+    border-radius: 10px;
+    padding: 24px;
+    transition: border-color 0.25s ease;
+  }
+
+  .service-card:hover {
+    border-color: rgba(238, 38, 38, 0.4);
+  }
+
+  .service-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  .service-icon {
+    font-size: 1.3rem;
+  }
+
+  .service-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin: 0;
+  }
+
+  .service-desc {
+    font-size: 13px;
+    color: #9CA3AF;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* Academic Focus Box */
+  .academic-box {
+    background: var(--color-burgundy, #1A080B);
+    border: 1px solid var(--color-border-deep, #380F15);
+    border-left: 4px solid var(--color-scarlet-red, #ee2626);
+    border-radius: 8px;
+    padding: 28px;
+  }
+
+  .academic-badge {
+    font-family: monospace;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    color: var(--color-scarlet-red, #ee2626);
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .academic-title {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin: 0 0 10px 0;
+  }
+
+  .academic-text {
+    font-size: 14px;
+    color: #D1D5DB;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  .academic-text strong {
+    color: #FFFFFF;
+  }
+
+  /* Action Widget Card (Sidebar 3) */
+  .action-widget-card {
+    background: var(--color-surface, #0F0909);
+    border: 1px solid var(--color-border-deep, #380F15);
+    border-radius: 12px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .action-widget-badge {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    color: var(--color-scarlet-red, #ee2626);
+    background: rgba(238, 38, 38, 0.1);
+    border: 1px solid rgba(238, 38, 38, 0.3);
+    padding: 4px 10px;
+    border-radius: 9999px;
+    width: fit-content;
+  }
+
+  .action-widget-title {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #FFFFFF;
+    margin: 0;
+  }
+
+  .action-widget-desc {
+    font-size: 13px;
+    color: #9CA3AF;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .action-widget-btn {
+    background: var(--color-scarlet-red, #ee2626);
+    color: #FFFFFF;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 0 16px rgba(238, 38, 38, 0.4);
+    transition: all 0.2s ease;
+  }
+
+  .action-widget-btn:hover {
+    gap: 12px;
+    box-shadow: 0 0 24px rgba(238, 38, 38, 0.6);
+  }
+
+  .action-widget-foot {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: #9CA3AF;
+  }
+
+  .status-dot-green {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #10B981;
+    box-shadow: 0 0 8px #10B981;
+  }
+</style>
+
+<script>
+  // Scroll progress bar calculation
+  const bar = document.getElementById('read-progress');
+  if (bar) {
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      bar.style.width = Math.min(100, Math.max(0, scrolled)) + '%';
+    }, { passive: true });
+  }
+</script>
