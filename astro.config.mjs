@@ -4,7 +4,7 @@ import sitemap from '@astrojs/sitemap';
 import cloudflare from '@astrojs/cloudflare';
 
 export default defineConfig({
-  site: 'https://fotisp-edge.fotispastrakis.workers.dev',
+  site: 'https://fotisp.gr',
   output: 'static',
   integrations: [mdx(), sitemap()],
   adapter: cloudflare({

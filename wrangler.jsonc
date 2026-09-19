@@ -1,43 +1,31 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "fotisp-edge",
+  "name": "fotisp-astral",
   "compatibility_date": "2024-09-23",
   "compatibility_flags": ["nodejs_compat"],
-  "pages_build_output_dir": "./dist",
+  "main": "./dist/_worker.js/index.js",
   "assets": {
-    "directory": "./dist"
+    "directory": "./dist",
+    "binding": "ASSETS"
   },
 
-  // Provision bindings in Cloudflare Dashboard or uncomment once resources are created:
+  "kv_namespaces": [
+    { "binding": "SESSION", "id": "b7f708694cb846479409e1eac504d782" },
+    { "binding": "CONTACT", "id": "59b545a2959c4daca1a5f8640954048f" }
+  ],
+
+  // Provision D1/R2 in the Cloudflare Dashboard or uncomment once resources are created:
   /*
   "d1_databases": [
-    {
-      "binding": "DB",
-      "database_name": "fotisp-edge-db",
-      "database_id": "REPLACE_WITH_D1_ID",
-      "migrations_dir": "migrations"
-    }
+    { "binding": "DB", "database_name": "fotisp-astral-db", "database_id": "REPLACE_WITH_D1_ID", "migrations_dir": "migrations" }
   ],
-
-  "kv_namespaces": [
-    {
-      "binding": "CACHE",
-      "id": "REPLACE_WITH_KV_ID"
-    }
-  ],
-
   "r2_buckets": [
-    {
-      "binding": "MEDIA",
-      "bucket_name": "fotisp-media"
-    }
+    { "binding": "MEDIA", "bucket_name": "fotisp-astral-media" }
   ],
   */
 
   "vars": {
-    "SITE_URL": "http://localhost:4321",
-    "THEME_VARIATION": "convert",
-    "RESEND_API_KEY": "",
-    "OPENWEATHERMAP_API_KEY": ""
+    "SITE_URL": "https://fotisp-astral.workers.dev",
+    "THEME_VARIATION": "convert"
   }
 }
